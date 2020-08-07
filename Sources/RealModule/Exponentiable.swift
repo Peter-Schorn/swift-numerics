@@ -11,7 +11,7 @@ infix operator **= : AssignmentPrecedence
 
 
 /**
- Extends [Numeric][1] and add a power function,
+ Extends [Numeric][1] and adds a power function,
  as well as the exponent operator `**` and the
  compound assignment exponent operator `**=`,
  both of which call through to the power function.

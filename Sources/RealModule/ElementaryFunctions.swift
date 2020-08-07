@@ -49,7 +49,7 @@
 /// - `Real`
 ///
 /// [elfn]: http://en.wikipedia.org/wiki/Elementary_function
-public protocol ElementaryFunctions: AdditiveArithmetic {
+public protocol ElementaryFunctions: Exponentiable {
   /// The [exponential function][wiki] e^x whose base `e` is the base of the natural logarithm.
   ///
   /// See also:
@@ -144,7 +144,6 @@ public protocol ElementaryFunctions: AdditiveArithmetic {
   ///
   /// [wiki]: https://en.wikipedia.org/wiki/Cosine
   static func cos(_ x: Self) -> Self
-  
   
   /// The [sine][wiki] of `x`.
   ///
@@ -281,15 +280,6 @@ public protocol ElementaryFunctions: AdditiveArithmetic {
   ///
   /// [wiki]: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions
   static func atan(_ x: Self) -> Self
-  
-  /// exp(y * log(x)) computed with additional internal precision.
-  ///
-  /// See also:
-  /// -
-  /// - `sqrt()`
-  /// - `root()`
-  ///
-  static func pow(_ x: Self, _ y: Self) -> Self
   
   /// `x` raised to the nth power.
   ///

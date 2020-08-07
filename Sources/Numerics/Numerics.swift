@@ -12,3 +12,12 @@
 // A module that re-exports the complete Swift Numerics public API.
 @_exported import RealModule
 @_exported import ComplexModule
+
+precedencegroup ExponentiativePrecedence {
+  associativity: right
+  higherThan: MultiplicationPrecedence
+}
+
+infix operator ** : ExponentiativePrecedence
+
+infix operator **= : AssignmentPrecedence
